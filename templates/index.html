@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Enter Cement Compression Strength Parameters</h2>
+    <form action="/predict" method="post">
+        <label for="Material_Quantity">Material Quantity (gm):</label><br>
+        <input type="text" id="Material_Quantity" name="Material Quantity (gm)"><br>
+
+        <label for="Additive_Catalyst">Additive Catalyst (gm):</label><br>
+        <input type="text" id="Additive_Catalyst" name="Additive Catalyst (gm)"><br>
+
+        <label for="Ash_Component">Ash Component (gm):</label><br>
+        <input type="text" id="Ash_Component" name="Ash Component (gm)"><br>
+
+        <label for="Water_Mix">Water Mix (ml):</label><br>
+        <input type="text" id="Water_Mix" name="Water Mix (ml)"><br>
+
+        <label for="Plasticizer">Plasticizer (gm):</label><br>
+        <input type="text" id="Plasticizer" name="Plasticizer (gm)"><br>
+
+        <label for="Moderate_Aggregator">Moderate Aggregator:</label><br>
+        <input type="text" id="Moderate_Aggregator" name="Moderate Aggregator"><br>
+
+        <label for="Refined_Aggregator">Refined Aggregator:</label><br>
+        <input type="text" id="Refined_Aggregator" name="Refined Aggregator"><br>
+
+        <label for="Formulation_Duration">Formulation Duration (hrs):</label><br>
+        <input type="text" id="Formulation_Duration" name="Formulation Duration (hrs)"><br>
+
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if prediction_text %}
+        <p>{{ prediction_text }}</p>
+    {% endif %}
+</body>
+</html>
